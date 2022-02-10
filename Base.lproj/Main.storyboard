@@ -38,6 +38,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Login"/>
+                                <connections>
+                                    <action selector="tapOnLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ePy-OC-DAb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -52,10 +55,14 @@
                             <constraint firstItem="1J8-0U-8wd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="zf5-o9-YhJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tfPass" destination="1J8-0U-8wd" id="rfe-wL-XIN"/>
+                        <outlet property="tfUsername" destination="4IO-Ec-MFy" id="Lyg-KO-QRx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="35" y="84"/>
+            <point key="canvasLocation" x="-254" y="-113"/>
         </scene>
     </scenes>
     <resources>
