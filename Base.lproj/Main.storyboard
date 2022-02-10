@@ -42,12 +42,21 @@
                                     <action selector="tapOnLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ePy-OC-DAb"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ReG-nC-dhV">
+                                <rect key="frame" x="87" y="94" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="6KK-ux-BAv"/>
+                                    <constraint firstAttribute="height" constant="240" id="ejx-H0-CbB"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="4IO-Ec-MFy" firstAttribute="trailing" secondItem="1J8-0U-8wd" secondAttribute="trailing" id="70E-59-8XJ"/>
                             <constraint firstItem="1J8-0U-8wd" firstAttribute="top" secondItem="4IO-Ec-MFy" secondAttribute="bottom" constant="30" id="8qM-yq-fRY"/>
+                            <constraint firstItem="ReG-nC-dhV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="REV-3W-rCA"/>
+                            <constraint firstItem="ReG-nC-dhV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Zno-VT-b6f"/>
                             <constraint firstItem="4IO-Ec-MFy" firstAttribute="leading" secondItem="1J8-0U-8wd" secondAttribute="leading" id="dXU-pR-UEt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aLw-Qj-agd" secondAttribute="bottom" constant="30" id="gL2-W6-OaX"/>
                             <constraint firstItem="aLw-Qj-agd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kIL-bj-lfl"/>
@@ -56,13 +65,14 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imgLogo" destination="ReG-nC-dhV" id="LHa-kM-C4T"/>
                         <outlet property="tfPass" destination="1J8-0U-8wd" id="rfe-wL-XIN"/>
                         <outlet property="tfUsername" destination="4IO-Ec-MFy" id="Lyg-KO-QRx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-254" y="-113"/>
+            <point key="canvasLocation" x="-514" y="-118"/>
         </scene>
     </scenes>
     <resources>
