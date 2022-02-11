@@ -8,6 +8,7 @@
 import UIKit
 import Toast_Swift
 import SDWebImage
+import CarbonKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var tfUsername: UITextField!
@@ -17,6 +18,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupImageLogo()
+        setupCarbonKit()
     }
     
     // Code sử dụng SDwebimage
@@ -54,6 +56,28 @@ class ViewController: UIViewController {
         style.messageColor = .white
         self.view.makeToast(noti, duration: 3.0, position: .bottom, style: style)
 
+    }
+    
+    func setupCarbonKit() {
+        let items = ["Features", "Products", "About"]
+                let carbonTabSwipeNavigation = CarbonTabSwipeNavigation(items: items, delegate: self)
+        carbonTabSwipeNavigation.insert(intoRootViewController: self)
+    }
+}
+
+extension ViewController: CarbonTabSwipeNavigationDelegate {
+    func carbonTabSwipeNavigation(_ carbonTabSwipeNavigation: CarbonTabSwipeNavigation, viewControllerAt index: UInt) -> UIViewController {
+        // return viewController at index
+        if index == 0 {
+            let vc = FeatureVC(nibName: "FeatureVC", bundle: nil)
+            return vc
+        }
+        
+        if index == 1 {
+            let vc = ProductVC(nibName: "ProductVC", bundle: nil)
+            return vc
+        }
+        return UIViewController()
     }
 }
 
